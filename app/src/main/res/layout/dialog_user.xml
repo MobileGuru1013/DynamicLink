@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/dialogRL"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_bg"
+        >
+
+        <RelativeLayout
+            android:id="@+id/titleRL"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@drawable/dialog_title_bg"
+            >
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:textColor="@color/white"
+                android:text="編輯暱稱"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/contentRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleRL"
+            >
+            <RelativeLayout
+                android:id="@+id/deviceIdRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/deviceIdTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="deviceId:"
+                    />
+
+                <TextView
+                    android:id="@+id/deviceIdTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:theme="@style/MyEditTextTheme"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/deviceIdTitle"
+                    android:text="asax"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviceIdRL"
+                >
+                <TextView
+                    android:id="@+id/nickNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="暱稱"
+                    />
+                <RelativeLayout
+                    android:id="@+id/noteEditRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/nickNameTitle"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/cover_bg_20"
+
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusableInTouchMode="true"
+                    >
+                    <EditText
+                        android:id="@+id/nicknameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme"
+                        android:layout_marginTop="5dp"
+                        android:hint="(必填)"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnRL"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/contentRL"
+            >
+            <LinearLayout
+                android:id="@+id/btnLL"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/negativeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="取消"
+                    />
+                <Button
+                    android:id="@+id/positiveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="確定"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
